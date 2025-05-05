@@ -1,0 +1,9 @@
+//Hide command details
+@echo off
+
+set /p birth_year=Enter your birth year: 
+set /a age=%date:~10,4% - %birth_year%
+echo Your age is: %age%
+
+//Wait before closing window
+pause

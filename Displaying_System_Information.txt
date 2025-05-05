@@ -1,0 +1,8 @@
+@echo off
+echo Username : %username%
+echo Version : 
+ver
+echo Date : %date%
+echo Time : 
+time
+pause
