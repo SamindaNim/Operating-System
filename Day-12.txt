@@ -1,0 +1,28 @@
+Code:-		
+		#include <stdio.h>
+		#include <unistd.h>
+		int main()
+		{
+			printf("\nHello World\n");
+			int f=fork();//Copeing process two times
+			int p=getpid();
+			if(f==0)
+			{
+				printf("\nI'm the child Process %d",p);
+			}
+			else{
+				printf("\nI'm the parent Process %d",f);
+			}
+			
+			return 0;
+		}
+
+Output:-
+		[saminda@Saminda-PC ~]$ vi Find_pid.c
+		[saminda@Saminda-PC ~]$ gcc Find_pid.c -o Find_pid
+		[saminda@Saminda-PC ~]$ ./Find_pid
+
+		Hello World
+
+		I'm the parent Process
+		I'm the child Process 18031
