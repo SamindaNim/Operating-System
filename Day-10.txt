@@ -1,0 +1,227 @@
+1) Print Hello World
+
+Code:-
+
+		#include<stdio.h>
+		int main() 
+		{
+			printf("Hello World!");
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch Hello.c
+		[saminda@Saminda-PC ~]$ vi Hello.c
+		[saminda@Saminda-PC ~]$ gcc Hello.c -o Hello
+		[saminda@Saminda-PC ~]$ ./Hello
+		Hello World!
+		
+2) Integers
+
+Code:-
+		#include<stdio.h>
+		int main()
+		{
+			int age=10;
+			printf("%d",age);
+			
+			printf("size: %zu", sizeof(age));
+			
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch DataType.c
+		[saminda@Saminda-PC ~]$ vi DataType.c
+		[saminda@Saminda-PC ~]$ gcc DataType.c -o DataType
+		[saminda@Saminda-PC ~]$ ./DataType
+		10size: 4
+		
+3) Char
+
+Input:-
+		#include<stdio.h>
+		int main()
+		{
+			char character='z';
+			printf("%c",character);	
+			printf("\n%d",character);
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch char.c
+		[saminda@Saminda-PC ~]$ vi char.c
+		[saminda@Saminda-PC ~]$ gcc char.c -o char
+		[saminda@Saminda-PC ~]$ ./char
+		z
+		122
+
+4) double
+
+Input:-
+		/* #include<stdio.h>
+		int main()
+		{
+			double number=12.45;
+			printf("%2flf",number);	
+			return 0;
+		}
+		*/
+		#include<stdio.h>
+		int main()
+		{
+			double number=12.45;
+			printf("%lf",number);	
+			return 0;
+		}
+
+Output:-
+		[saminda@Saminda-PC ~]$ touch double.c
+		[saminda@Saminda-PC ~]$ vi double.c
+		[saminda@Saminda-PC ~]$ gcc double.c -o double
+		[saminda@Saminda-PC ~]$ ./double.c
+		-bash: ./double.c: Permission denied
+		[saminda@Saminda-PC ~]$ ./double
+		12.450000
+
+5) float
+
+Input:-
+		#include<stdio.h>
+		int main()
+		{
+			float number=10.9f;
+			printf("%f",number);	
+			printf("\n%.1f",number);
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch float.c
+		[saminda@Saminda-PC ~]$ vi float.c
+		[saminda@Saminda-PC ~]$ gcc float.c -o float
+		[saminda@Saminda-PC ~]$ ./float
+		10.900000
+		10.9
+
+6) variables
+
+Code:-
+		#include<stdio.h>
+		int main()
+		{
+			int age=25;
+			printf("%d",age);
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch variables.c
+		[saminda@Saminda-PC ~]$ vi variables.c
+		[saminda@Saminda-PC ~]$ gcc variables.c -o variables
+		[saminda@Saminda-PC ~]$ ./variables
+		25
+
+7) variables example
+
+Code:-
+
+		#include<stdio.h>
+		int main()
+		{
+			int first_number=25;
+			printf("First Number:%d",first_number);
+			
+			int second_number=first_number;
+			printf("Second Number:%d",second_number);
+			return 0;
+		}
+		
+Output:-
+		[saminda@Saminda-PC ~]$ touch variable01.c
+		[saminda@Saminda-PC ~]$ vi variable01.c
+		[saminda@Saminda-PC ~]$ gcc variable01.c -o variable01
+		[saminda@Saminda-PC ~]$ ./variable01
+		First Number:25Second Number:25
+
+8) Get input from User
+
+Input:-
+		#include<stdio.h>
+		int main()
+		{
+			int age;
+			printf("Enter your age: ");
+			scanf("%d", &age);
+			
+			printf("Age=%d",age);
+			return 0;
+		}
+
+Output:-
+		[saminda@Saminda-PC ~]$ touch InputFromUser.c
+		[saminda@Saminda-PC ~]$ vi InputFromUser.c
+		[saminda@Saminda-PC ~]$ gcc InputFromUser.c -o InputFromUser
+		[saminda@Saminda-PC ~]$ ./InputFromUser
+		Enter your age: 22
+		Age=22
+		
+9) Get different inputs
+
+Input:-
+
+		#include<stdio.h>
+		int main()
+		{
+			double number;
+			char alpha;
+
+			printf("Enter double input: ");
+			scanf("%lf",&number);
+			printf("\nYour double input is:%lf",number);
+
+			printf("Enter char input:");
+			scanf(" %c",&alpha);
+			printf("\nYour char input is:%c",alpha);
+
+			return 0;
+		}
+
+Output:-
+
+		[saminda@Saminda-PC ~]$ touch DifferentInputs.c
+		[saminda@Saminda-PC ~]$ vi DifferentInputs.c
+		[saminda@Saminda-PC ~]$ gcc DifferentInputs.c -o DifferentInputs
+		[saminda@Saminda-PC ~]$ ./DifferentInputs
+		Enter double input: 4.44
+
+		Your double input is:4.440000
+		Enter char input:N
+
+		Your char input is:N
+		
+//Take multiple inputs together
+Input:-
+
+		#include<stdio.h>
+		int main()
+		{
+			double number;
+			char alpha;
+			printf("Enter inputs: ");
+			scanf("%lf %c",&number,&alpha);
+			return 0;
+		}
+		
+Output:-
+
+		[saminda@Saminda-PC ~]$ vi DifferentInputs.c
+		[saminda@Saminda-PC ~]$ gcc DifferentInputs.c -o DifferentInputs
+		[saminda@Saminda-PC ~]$ ./DifferentInputs
+		Enter inputs: 5.55 N
